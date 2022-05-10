@@ -29,7 +29,7 @@ func TestCalculate_Service(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			c := &service.Calculate{}
+			c := service.NewCalculate()
 			if got := c.Service(tt.args.loopNumber); got != tt.want {
 				t.Errorf("Calculate.Service() = %v, want %v", got, tt.want)
 			}
