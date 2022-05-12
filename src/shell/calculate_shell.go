@@ -12,13 +12,13 @@ type CalculateShell interface {
 
 func NewCalculateShell() CalculateShell {
 	return &CalculateShellImpl{
-		service.NewCalculate(),
+		service.NewCalculateService(),
 		config.NewConfig(),
 	}
 }
 
 type CalculateShellImpl struct {
-	CalculateService service.Calculate
+	CalculateService service.CalculateService
 	Cfg              config.Config
 }
 
